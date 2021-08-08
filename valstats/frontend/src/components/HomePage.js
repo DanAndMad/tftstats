@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Card, Button } from "react-bootstrap"
+import { Card, Button, Navbar, Nav  } from "react-bootstrap";
+import Container from 'react-bootstrap/Container';
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import ContentPage from './ContentPage';
 
@@ -27,7 +28,18 @@ export default class HomePage extends Component {
 
     render() {
         return (
-            <Router>
+           <div>
+                <Navbar bg="dark" variant="dark">
+                    <Container>
+                        <Navbar.Brand href="#home">ValStats</Navbar.Brand>
+                        <Nav className="me-auto">
+                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="#content">Content</Nav.Link>
+                            <Nav.Link href="#about">About</Nav.Link>
+                        </Nav>
+                    </Container>
+                </Navbar>
+               <Router>
                 <Switch>
                     <Route exact path='/' render={
                         () => {
@@ -36,7 +48,10 @@ export default class HomePage extends Component {
                     } />
                     <Route path='/content' component={ContentPage} />
                 </Switch>
-            </Router>
+            </Router>    
+           </div>
+
+            
         );
     }
 }
