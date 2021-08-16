@@ -31,7 +31,7 @@ export default class HomePage extends Component {
            <div>
                 <Navbar bg="dark" variant="dark">
                     <Container>
-                        <Navbar.Brand href="#home">ValStats</Navbar.Brand>
+                        <Navbar.Brand href="#home">TFTStats</Navbar.Brand>
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
                             <Nav.Link href="#content">Content</Nav.Link>
